@@ -1,0 +1,3 @@
+# Requisitos principais
+openai==1.14.3            # Ou a versão mais recente disponível
+python-dotenv==1.0.1      # Para gerir variáveis sensíveis (API keys)
