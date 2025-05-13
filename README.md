@@ -1,28 +1,41 @@
 # AIM – LLM Personal Trainer
 
-Este projeto é uma aplicação educativa que usa LLMs (Large Language Models) para ensinar qualquer tema de forma adaptativa e interativa.
+**AIM** (Adaptive Interactive Mentor) is an educational AI assistant that helps users learn about any topic through a conversation-based interface.
 
-O objetivo é aprender Python em profundidade ao mesmo tempo que se constrói uma aplicação útil, extensível e com integração com Inteligência Artificial.
-
----
-
-## Estrutura Inicial
-
-- `main.py` – ponto de entrada da aplicação
-- `llm_engine.py` – comunicação com a LLM
-- `user_profile.py` – gestão de progresso e perfil
-- `content_generator.py` – lógica de explicações e quizzes
-- `storage/` – dados e histórico do utilizador
-- `config/` – definições e variáveis
-- `data/` – dados de exemplo
+This project is also designed as a structured way to **learn Python** while building something real and useful, with clean architecture, persistence, and LLM integration — all without requiring paid APIs.
 
 ---
 
-## Tecnologias
+## 🔍 Features
 
-- Python 3.11+
-- OpenAI API ou HuggingFace Transformers
-- SQLite ou JSON local
-- (opcional) Flask / FastAPI para interface web
+- Learn any topic by simply typing it (uses a local language model).
+- Automatically creates and updates a user profile.
+- Stores your learning history locally in `.json` format.
+- Interactive terminal menu: learn, view or clear your history.
+- Fully offline and free (no OpenAI API required).
+- Modular Python structure with good practices and documentation.
 
 ---
+
+## 🚀 How It Works
+
+1. At launch, the user chooses a profile name (saved locally).
+2. The app prompts for a topic (e.g. `"daltonism"`).
+3. A small local model (e.g. `flan-t5-small`) generates a short explanation.
+4. The session is logged to the user's profile file.
+5. User can review or clear their history at any time.
+
+---
+
+## 🧠 LLM Model Used (default)
+
+| Model | Source | Type | Notes |
+|-------|--------|------|-------|
+| `google/flan-t5-small` | Hugging Face | text2text | Fast and free, good for short prompts |
+
+> You can change the model in `llm_engine.py` to `flan-t5-base` or `tiiuae/falcon-rw-1b` for better results.
+
+---
+
+## 📁 Project Structure
+

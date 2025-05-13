@@ -1,0 +1,16 @@
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Environment variables
+.env
+
+# User data
+data/*.json
+!data/.gitkeep
+
+# IDE/editor config (opcional)
+.vscode/
